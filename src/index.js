@@ -1,17 +1,19 @@
+// Домашнє завдання!!!!!!!!!
+//Створити компонент меню з елементами та передавати в середину всі пункти меню через props
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const Menu = (props)=>(
+   <nav>
+       <ul>
+           <li>{props.greeting}</li>
+           <li>{props.work}</li>
+           <li>{props.about}</li>
+           <li>{props.con}</li>
+           <li>{props.sth}</li>
+       </ul>
+   </nav> 
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<Menu greeting='hello, check my menu' work='work' about='about' con='contacts' sth='sth else'/>, document.getElementById("root"));
